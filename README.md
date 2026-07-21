@@ -41,3 +41,58 @@ No existía pérdida de información, aunque ninguna compra podía completarse c
 | Servicio de pagos | Alta | Alto | 9 |
 | Error backend | Media | Alto | 7 |
 | Base de datos | Baja | Alto | 5 |
+
+---
+
+## Acciones realizadas
+
+- Revisión de logs del servidor.
+- Simulación de compras con diferentes usuarios.
+- Verificación de la API del proveedor de pagos.
+- Comparación con versiones anteriores del sistema.
+- Corrección de la configuración de autenticación.
+
+---
+
+## Resumen (Problema - Accion - impacto)
+
+### Problema
+
+Los pedidos no podían completarse.
+
+### Acción
+
+Se detectó que una credencial utilizada para comunicarse con el proveedor de pagos había expirado. Se actualizó la configuración y se realizaron pruebas funcionales para validar la solución.
+
+### Impacto
+
+- Los usuarios pudieron finalizar compras nuevamente.
+- Se redujeron los reclamos al soporte.
+- El sistema volvió a operar normalmente.
+
+---
+
+# Post-Mortem Constructivo
+
+## ¿Qué ocurrió?
+
+Una credencial vencida impedía la comunicación entre la aplicación y el proveedor de pagos.
+
+## Causa raíz
+
+No existía un mecanismo que alertara sobre el vencimiento de las credenciales utilizadas por el sistema.
+
+## Acciones correctivas
+
+- Actualizar las credenciales.
+- Verificar la configuración del servicio.
+- Validar nuevamente todo el flujo de compra.
+
+## Acciones preventivas
+
+- Implementar alertas antes del vencimiento de las credenciales.
+- Incorporar pruebas automáticas del proceso de compra.
+- Documentar las configuraciones críticas del sistema.
+
+---
+
