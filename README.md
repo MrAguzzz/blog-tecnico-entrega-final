@@ -96,3 +96,28 @@ No existía un mecanismo que alertara sobre el vencimiento de las credenciales u
 
 ---
 
+## Aprendizajes
+
+Este incidente demostró la importancia de monitorear servicios externos y mantener documentadas las configuraciones críticas.
+
+También reforzó la necesidad de validar los componentes externos antes de asumir que el problema se encuentra dentro del código de la aplicación.
+
+---
+
+## Evidencia de control de versiones
+
+Repositorio:
+https://github.com/mraguzzz/blog-tecnico-entrega-final
+
+Historial de commits:
+https://github.com/mraguzzz/blog-tecnico-entrega-final/commits/main
+
+---
+
+## Reflexión sobre feedback radicalmente sincero
+
+Durante la investigación, un compañero comentó que el equipo estaba enfocando el análisis únicamente en la base de datos y no estaba considerando los servicios externos.
+
+En lugar de descartar esa observación, decidimos ampliar la investigación y revisar el servicio de procesamiento de pagos. Gracias a ese cambio de enfoque identificamos la causa real del incidente en menor tiempo.
+
+Esta experiencia reforzó la importancia de aceptar comentarios honestos y bien fundamentados, ya que permiten cuestionar supuestos, mejorar la toma de decisiones y resolver problemas de manera más eficiente.
