@@ -16,3 +16,28 @@ Los usuarios podían navegar normalmente por el sitio, iniciar sesión y agregar
 No existía pérdida de información, aunque ninguna compra podía completarse correctamente.
 
 ---
+
+## Evidencias
+
+- Incremento de reportes en soporte.
+- Registros del servidor con errores HTTP 500.
+- No se registraban nuevos pedidos en la base de datos.
+- El problema ocurría únicamente durante el proceso de pago.
+
+---
+
+## Hipótesis
+
+1. Error en la conexión con la base de datos.
+2. Problema con el servicio de procesamiento de pagos.
+3. Error de programación en el backend al guardar el pedido.
+
+---
+
+## Priorización
+
+| Hipótesis | Probabilidad | Impacto | Puntaje |
+|-----------|-------------|---------|---------|
+| Servicio de pagos | Alta | Alto | 9 |
+| Error backend | Media | Alto | 7 |
+| Base de datos | Baja | Alto | 5 |
